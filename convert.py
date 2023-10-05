@@ -13,10 +13,10 @@ gif_path = os.path.join(path, 'gif')
 os.makedirs(png_path, exist_ok=True)
 os.makedirs(gif_path, exist_ok=True)
 
-# for i in os.listdir(img_path):
-#     name = i.split('.')[0]
-#     img = cv.imread(os.path.join(img_path, i), cv.IMREAD_UNCHANGED)
-#     cv.imwrite(os.path.join(png_path, f'{name}.png'), img)
+for i in os.listdir(img_path):
+    name = i.split('.')[0]
+    img = cv.imread(os.path.join(img_path, i), cv.IMREAD_UNCHANGED)
+    cv.imwrite(os.path.join(png_path, f'{name}.png'), img)
 
 for i in os.listdir(vid_path):
     name = i.split('.')[0]
